@@ -1,17 +1,16 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         CreditPaymentService servise = new CreditPaymentService();
 
-        double APR = 9.99;     // годовая процентная ставка
-        int principal = 1_000_000;      //тело кредита
+        double APR = 9.99;     // APR (Annual Percentage Rate) — годовая процентная ставка.
+        int principal = 1_000_000;  //Principal в контексте банковского кредита — это основная сумма, первоначальная сумма денег, взятая в долг, без учёта процентов и дополнительных сборов.
         int term = 1;  // срок кредита в годах
 
         System.out.println("При годовой ставке: " + APR + " %");
         System.out.println("Размере кредита в: " + principal + " руб.");
 
         double annuity = servise.calculate(APR, principal, term);
+        // annuity - аннуитент
         System.out.println("Аннуитентный платеж при сроке в 1 год:  " + annuity + " руб.");
 
 
